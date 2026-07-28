@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img { pointer-events: none; }
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+input, button { font: inherit; }
+/**/
+
+body {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 80vh;
+    aspect-ratio: 1;
+    margin: 20px auto 0;
+    background: url('./assets/images/tictactoe.svg') center no-repeat;
+    background-size: contain;
+}
+
+.box {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.setNames, .newGame, .doneButton {
+    background-color: rgb(151, 255, 220);
+    border-radius: 5px;
+    height: 2rem;
+    width: 150px;
+}
