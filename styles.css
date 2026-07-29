@@ -16,7 +16,63 @@ input, button { font: inherit; }
 /**/
 
 body {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    gap: 15px;
+    font-size: 2rem;
+}
+
+.namesDialog {
+    height: 100vh;
+    width: 450px;
+    max-height: 100%;
+    max-width: 100%;
+    text-align: right;
+    padding: 30px;
+}
+
+.namesDialog[open] { animation: slide 0.3s ease-in forwards; }
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    left: -400px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.namesForm {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.namesHeading {
+    margin-bottom: 30px;
+}
+
+.doneButton {
+    margin-top: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.gameResult {
+    background-color: rgb(243, 252, 255);
+    border-radius: 30px;
+    padding: 10px 25px;
 }
 
 .board {
@@ -24,7 +80,6 @@ body {
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     height: 80vh;
     aspect-ratio: 1;
-    margin: 20px auto 0;
     background: url('./assets/images/tictactoe.svg') center no-repeat;
     background-size: contain;
 }
@@ -38,6 +93,6 @@ body {
 .setNames, .newGame, .doneButton {
     background-color: rgb(151, 255, 220);
     border-radius: 5px;
-    height: 2rem;
-    width: 150px;
+    height: 3.5rem;
+    width: 250px;
 }

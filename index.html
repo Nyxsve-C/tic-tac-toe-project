@@ -9,34 +9,34 @@
 </head>
 <body>
     <dialog class="namesDialog" id="namesDialog" closedby="any">
+        <button class="dialogCloseButton" type="button" command="close" commandfor="namesDialog">
+            <img src="./assets/images/close.svg" alt="close dialog icon">
+        </button>
         <form class="namesForm" method="dialog">
             <h2 class="namesHeading">New player names</h2>
-            <button class="dialogCloseButton" type="button" command="close" commandfor="namesDialog">
-                <img src="./assets/images/close.svg" alt="close dialog icon">
-            </button>
             <label for="playerOneInput">Player 1</label>
-            <input type="text" id="playerOneInput" required>
+            <input type="text" id="playerOneInput" required autofocus>
             <label for="playerTwoInput">Player 2</label>
             <input type="text" id="playerTwoInput" required>
             <button class="doneButton" type="submit" formmethod="dialog">Done</button>
         </form>
     </dialog>
-    <h1 class="heading">Tic-tac-toe</h1>
-    <div class="controls">
-        <button class="setNames" command="show-modal" commandfor="namesDialog">Set player names</button>
-        <button class="newGame">Start new game</button>
-    </div>
-    <p class="gameResult"></p>
+    <header>
+        <h1 class="heading">Tic-tac-toe</h1>
+        <button class="setNames" command="show-modal" commandfor="namesDialog" type="button">Set player names</button>
+        <button class="newGame" type="button">Start new game</button>
+        <p class="gameResult"></p>
+    </header>
     <div class="board">
-        <button class="box" data-row="0" data-column="0"></button>
-        <button class="box" data-row="0" data-column="1"></button>
-        <button class="box" data-row="0" data-column="2"></button>
-        <button class="box" data-row="1" data-column="0"></button>
-        <button class="box" data-row="1" data-column="1"></button>
-        <button class="box" data-row="1" data-column="2"></button>
-        <button class="box" data-row="2" data-column="0"></button>
-        <button class="box" data-row="2" data-column="1"></button>
-        <button class="box" data-row="2" data-column="2"></button>
+        <button class="box" data-row="0" data-column="0" type="button"></button>
+        <button class="box" data-row="0" data-column="1" type="button"></button>
+        <button class="box" data-row="0" data-column="2" type="button"></button>
+        <button class="box" data-row="1" data-column="0" type="button"></button>
+        <button class="box" data-row="1" data-column="1" type="button"></button>
+        <button class="box" data-row="1" data-column="2" type="button"></button>
+        <button class="box" data-row="2" data-column="0" type="button"></button>
+        <button class="box" data-row="2" data-column="1" type="button"></button>
+        <button class="box" data-row="2" data-column="2" type="button"></button>
     </div>
 </body>
 </html>
